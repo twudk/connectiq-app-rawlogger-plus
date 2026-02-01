@@ -210,8 +210,7 @@ class RL_App extends App.AppBase {
 
   function getInitialView() {
     //Sys.println("DEBUG: RL_App.getInitialView()");
-
-    return [new RL_View(), new RL_ViewDelegate()] as Array<Ui.Views or Ui.InputDelegates>;
+    return [new RL_View(), new RL_ViewDelegate()] as [Ui.Views, Ui.InputDelegates];
   }
 
   function onSettingsChanged() {
@@ -227,7 +226,7 @@ class RL_App extends App.AppBase {
 
   function initActivity() as Void {
     if($.RL_oActivitySession == null) {
-      var oActivitySession = ActivityRecording.createSession({ :name => "RawLogger", :sport => ActivityRecording.SPORT_GENERIC, :subSport => ActivityRecording.SUB_SPORT_GENERIC });
+      var oActivitySession = ActivityRecording.createSession({ :name => "RawLogger", :sport => Activity.SPORT_GENERIC, :subSport => Activity.SUB_SPORT_GENERIC });
       var iFitFields = 16;  // ... it would seem ConnectIQ allows only 16 contributed FIT fields (undocumented)
       var iFitBytes = 256;  // ... FIT message can be no longer than 256 bytes
       var bHighDefListener_Acceleration = false;

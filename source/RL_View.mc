@@ -61,7 +61,6 @@ class RL_View extends Ui.View {
   private var iWidthX as Number = 0;
   private var iHeightY as Number = 0;
   private var iCenterX as Number = 0;
-  private var iCenterY as Number = 0;
   private var iStatusY as Number = 0;
   private var iLabel1Y as Number = 0;
   private var iLabel2Y as Number = 0;
@@ -89,7 +88,6 @@ class RL_View extends Ui.View {
     self.iWidthX = _oDC.getWidth();
     self.iHeightY = _oDC.getHeight();
     self.iCenterX = (self.iWidthX/2).toNumber();
-    self.iCenterY = (self.iHeightY/2).toNumber();
     self.iStatusY = (self.iHeightY/8).toNumber();
     self.iLabel1Y = (self.iHeightY/5+self.iHeightY/8).toNumber();
     self.iLabel2Y = (self.iHeightY/5+self.iHeightY/8*2).toNumber();
